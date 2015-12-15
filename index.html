@@ -1,1 +1,63 @@
-hello!!
+<!doctype html>
+<html>
+<head>
+	<title>Simple Wrapper</title>
+	<meta charset='utf-8'>
+	<style>
+	*{
+		margin:0;
+		padding:0;
+		box-sizing:border-box;
+	}
+	body{
+		margin:20px 0;
+	}
+	h1{
+		text-align:center;
+	}
+	div#div{
+		margin:50px auto;
+		width:300px;
+	}
+	div#inputs{
+		text-align:center;
+		padding:10px 0;
+	}
+	div.div{
+		background:#ccc;
+		padding:20px;
+		display:inline-block;
+		border:1px solid #2d2d2d;
+		margin:20px;
+	}
+	.wrapped{
+		padding:2px;
+		display:inline-block;
+		border:2px solid red;
+	}
+	input[type=button]{
+		margin-bottom:10px;
+		padding:5px;
+	}
+	</style>
+	<script src='simpWrap.js'></script>
+</head>
+<body>
+	<h1>Simple Wrapper</h1>
+	<div id='div'>
+		<div id='inputs'>
+			<input type='button' value='wrapped all elements' onclick="simpWrap(0,'div#div div.div','div#div')">
+			<input type='button' value='wrapped 1 elements' onclick="simpWrap(1,'div#div div.div','div#div')">
+			<input type='button' value='wrapped 2 elements' onclick="simpWrap(2,'div#div div.div','div#div')">
+			<input type='button' value='wrapped 3 elements' onclick="simpWrap(3,'div#div div.div','div#div')">
+		</div>
+		<div class='div'>1</div>
+		<div class='div'>2</div>
+		<div class='div'>3</div>
+		<div class='div'>4</div>
+		<div class='div'>5</div>
+		<div class='div'>6</div>
+		<div class='div'>7</div>
+	</div>
+</body>
+</html>
